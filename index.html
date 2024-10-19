@@ -1,135 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Time tracking dashboard</title>
-  
-</head>
-<body>
-  <main>
-    <article>
-      <section>
-        <div>
-          <img src='./images/image-jeremy.png' alt="Jeremy Robson"></img>
-          <div>
-            <p>Report for</p>
-            <p>Jeremy Robson</p>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Time tracking dashboard</title>
+  </head>
+  <body>
+    <main class="dashboard">
+      <article class="dashboard__container">
+        <section class="profile">
+          <div class="profile__header">
+            <img
+              src="./images/image-jeremy.png"
+              alt="Jeremy Robson"
+              class="profile__image"
+            />
+            <div class="profile__info">
+              <p class="profile__report-text">Report for</p>
+              <p class="profile__name">Jeremy Robson</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <button>Daily</button>
-          <button>Weekly</button>
-          <button>Monthly</button>
-        </div>
-      </section>
-      <section>
-        <section>
-          <div>
-            <div>
-              <h3>Work</h3>
-              <button><img src="./images/icon-ellipsis.svg"></img></button>
-            </div>
-            <div>
-              <p>5hrs</p>
-              <p>Previous - 7hrs</p>
-              <!-- <p>32hrs</p>
-              <p>Previous - 36hrs</p>
-              <p>103hrs</p>
-              <p>Previous - 128hrs</p> -->
-            </div>
+          <div class="profile__period-selector">
+            <button class="profile__period-btn">Daily</button>
+            <button class="profile__period-btn profile__period-btn--active">
+              Weekly
+            </button>
+            <button class="profile__period-btn">Monthly</button>
           </div>
         </section>
 
-        <section>
-          <div>
-            <div>
-              <h3>Play</h3>
-              <button><img src="./images/icon-ellipsis.svg"></img></button>
+        <section class="activities">
+          <section class="activity activity--work">
+            <div class="activity__content">
+              <div class="activity__header">
+                <h3 class="activity__title">Work</h3>
+                <button class="activity__menu-btn">
+                  <img
+                    src="./images/icon-ellipsis.svg"
+                    alt="menu"
+                    class="activity__menu-icon"
+                  />
+                </button>
+              </div>
+              <div class="activity__time">
+                <p class="activity__hours">5hrs</p>
+                <p class="activity__previous">Previous - 7hrs</p>
+                <!-- <p class="activity__hours">32hrs</p>
+              <p class="activity__previous">Previous - 36hrs</p>
+              <p class="activity__hours">103hrs</p>
+              <p class="activity__previous">Previous - 128hrs</p> -->
+              </div>
             </div>
-            <div>
-              <p>1hr</p>
-              <p>Previous - 2hrs</p>
-              <!-- <p>10hrs</p>
-              <p>Previous - 8hrs</p>
-              <p>23hrs</p>
-              <p>Previous - 29hrs</p> -->
-            </div>
-          </div>
-        </section>
+          </section>
 
-        <section>
-          <div>
-            <div>
-              <h3>Study</h3>
-              <button><img src="./images/icon-ellipsis.svg"></img></button>
+          <section class="activity activity--play">
+            <div class="activity__content">
+              <div class="activity__header">
+                <h3 class="activity__title">Play</h3>
+                <button class="activity__menu-btn">
+                  <img
+                    src="./images/icon-ellipsis.svg"
+                    alt="menu"
+                    class="activity__menu-icon"
+                  />
+                </button>
+              </div>
+              <div class="activity__time">
+                <p class="activity__hours">1hr</p>
+                <p class="activity__previous">Previous - 2hrs</p>
+                <!-- <p class="activity__hours">10hrs</p>
+              <p class="activity__previous">Previous - 8hrs</p>
+              <p class="activity__hours">23hrs</p>
+              <p class="activity__previous">Previous - 29hrs</p> -->
+              </div>
             </div>
-            <div>
-              <p>0hrs</p>
-              <p>Previous - 1hr</p>
-              <!-- <p>4hrs</p>
-              <p>Previous - 7hrs</p>
-              <p>13hrs</p>
-              <p>Previous - 19hrs</p> -->
-            </div>
-          </div>
-        </section>
+          </section>
 
-        <section>
-          <div>
-            <div>
-              <h3>Exercise</h3>
-              <button><img src="./images/icon-ellipsis.svg"></img></button>
+          <section class="activity activity--study">
+            <div class="activity__content">
+              <div class="activity__header">
+                <h3 class="activity__title">Study</h3>
+                <button class="activity__menu-btn">
+                  <img
+                    src="./images/icon-ellipsis.svg"
+                    alt="menu"
+                    class="activity__menu-icon"
+                  />
+                </button>
+              </div>
+              <div class="activity__time">
+                <p class="activity__hours">0hrs</p>
+                <p class="activity__previous">Previous - 1hr</p>
+                <!-- <p class="activity__hours">4hrs</p>
+              <p class="activity__previous">Previous - 7hrs</p>
+              <p class="activity__hours">13hrs</p>
+              <p class="activity__previous">Previous - 19hrs</p> -->
+              </div>
             </div>
-            <div>
-              <p>1hr</p>
-              <p>Previous - 1hr</p>
-              <!-- <p>4hrs</p>
-              <p>Previous - 5hrs</p>
-              <p>11hrs</p>
-              <p>Previous - 18hrs</p> -->
-            </div>
-          </div>
-        </section>
+          </section>
 
-        <section>
-          <div>
-            <div>
-              <h3>Social</h3>
-              <button><img src="./images/icon-ellipsis.svg"></img></button>
+          <section class="activity activity--exercise">
+            <div class="activity__content">
+              <div class="activity__header">
+                <h3 class="activity__title">Exercise</h3>
+                <button class="activity__menu-btn">
+                  <img
+                    src="./images/icon-ellipsis.svg"
+                    alt="menu"
+                    class="activity__menu-icon"
+                  />
+                </button>
+              </div>
+              <div class="activity__time">
+                <p class="activity__hours">1hr</p>
+                <p class="activity__previous">Previous - 1hr</p>
+                <!-- <p class="activity__hours">4hrs</p>
+              <p class="activity__previous">Previous - 5hrs</p>
+              <p class="activity__hours">11hrs</p>
+              <p class="activity__previous">Previous - 18hrs</p> -->
+              </div>
             </div>
-            <div>
-              <p>1hr</p>
-              <p>Previous - 3hr</p>
-              <!-- <p>5hrs</p>
-              <p>Previous - 10hrs</p>
-              <p>21hrs</p>
-              <p>Previous - 23hrs</p> -->
-            </div>
-          </div>
-        </section>
+          </section>
 
-        <section>
-          <div>
-            <div>
-              <h3>Self Care</h3>
-              <button><img src="./images/icon-ellipsis.svg"></img></button>
+          <section class="activity activity--social">
+            <div class="activity__content">
+              <div class="activity__header">
+                <h3 class="activity__title">Social</h3>
+                <button class="activity__menu-btn">
+                  <img
+                    src="./images/icon-ellipsis.svg"
+                    alt="menu"
+                    class="activity__menu-icon"
+                  />
+                </button>
+              </div>
+              <div class="activity__time">
+                <p class="activity__hours">1hr</p>
+                <p class="activity__previous">Previous - 3hrs</p>
+                <!-- <p class="activity__hours">5hrs</p>
+              <p class="activity__previous">Previous - 10hrs</p>
+              <p class="activity__hours">21hrs</p>
+              <p class="activity__previous">Previous - 23hrs</p> -->
+              </div>
             </div>
-            <div>
-              <p>0hr</p>
-              <p>Previous - 1hr</p>
-              <!-- <p>2hrs</p>
-              <p>Previous - 2hrs</p>
-              <p>7hrs</p>
-              <p>Previous - 11hrs</p> -->
+          </section>
+
+          <section class="activity activity--self-care">
+            <div class="activity__content">
+              <div class="activity__header">
+                <h3 class="activity__title">Self Care</h3>
+                <button class="activity__menu-btn">
+                  <img
+                    src="./images/icon-ellipsis.svg"
+                    alt="menu"
+                    class="activity__menu-icon"
+                  />
+                </button>
+              </div>
+              <div class="activity__time">
+                <p class="activity__hours">0hr</p>
+                <p class="activity__previous">Previous - 1hr</p>
+                <!-- <p class="activity__hours">2hrs</p>
+              <p class="activity__previous">Previous - 2hrs</p>
+              <p class="activity__hours">7hrs</p>
+              <p class="activity__previous">Previous - 11hrs</p> -->
+              </div>
             </div>
-          </div>
+          </section>
         </section>
-      </section>
-    </article>
-  </main>
-</body>
+      </article>
+    </main>
+  </body>
 </html>
