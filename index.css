@@ -193,3 +193,61 @@ body {
     font-size: 0.9375rem;
     color: var(--pale-blue);
 }
+
+@media (min-width: 52rem) {
+    .dashboard {
+        height: 100vh;
+    }
+    
+    .dashboard__container {
+        max-width: 60rem;
+        display: grid;
+        grid-template-columns: 1fr 3fr; 
+        gap: 1.5rem;
+    }
+
+    .profile__header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: 2rem;
+        padding: 1.5rem;
+        height: 66.67%;
+    }
+
+    .profile__info {
+        height: 100%;
+    }
+    
+    .profile__name {
+        font-size: 2rem;
+    }
+
+    .profile__period-selector {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5rem;
+        height: 33.33%;
+    }
+
+    .activities {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .activity__header {
+        padding-block-end: 1rem;
+    }
+
+    .activity__time {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: 1rem;
+    }
+
+    .activity__hours {
+        font-size: 2.75rem;
+    }
+}
