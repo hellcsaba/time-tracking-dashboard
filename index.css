@@ -189,9 +189,17 @@ body {
     font-weight: 300;
 }
 
+.activity__hours--hidden {
+    display: none;
+}
+
 .activity__previous {
     font-size: 0.9375rem;
     color: var(--pale-blue);
+}
+
+.activity__previous--hidden {
+    display: none;
 }
 
 @media (min-width: 52rem) {
