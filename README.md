@@ -11,6 +11,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Continuous development](#continuous-development)
 - [Author](#author)
 
 ## Overview
@@ -52,7 +53,7 @@ Users should be able to:
 
 ### What I learned
 
-I learnt how to manage the period selection functionality using HTML data attributes and JavaScript. I added event listeners to the period-selector buttons (daily, weekly, monthly) and based on the data-time HTML data attribute I can get the clicked button. Then I can select the hours and previous hours related to the selected period. The benefit of that is I can easily extend it with other period buttons since I just need to assign a new value for the data-time attribute. The solution is not perfect since currently I would need to add more hours and previous paragraphs for new periods because it's not dynamically created (just the display property changes).
+I learnt how to manage the period selection functionality using HTML data attributes and JavaScript. I added event listeners to the period-selector buttons (daily, weekly, monthly) and based on the data-time HTML data attribute I can determine which button was clicked. Then I can select the hours and previous hours related to the selected period. The benefit of that is I can easily extend it with other period buttons since I just need to assign a new value for the data-time attribute. The solution is not perfect since currently I would need to add more hours and previous paragraphs for new periods because it's not dynamically created (just the display property changes).
 
 ```html
 <div class="profile__period-selector">
@@ -68,6 +69,29 @@ const selectedTime = this.getAttribute("data-time");
 const selectedHours = document.querySelectorAll(`.activity__hours[data-hours="${selectedTime}"]`);
 
 const selectedPrevious = document.querySelectorAll(`.activity__previous[data-previous="${selectedTime}"]`);
+```
+
+### Continuous development
+
+Since the What I learned section, I updated the code. Now I retreieve the data with the fetchAPI then I dynamically populate the DOM with activities. Additionally, I partly handled the errors that can occur but currently there isn't any feedback on the UI about errors.
+
+```js
+const getActivities = async () => {
+  const response = await fetch("/data.json");
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  return response.json();
+};
+
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const data = await getActivities();
+    renderActivites(data);
+  } catch (error) {
+    console.error("Failed to fetch activities:", error.message);
+  }
+});
 ```
 
 ## Author
